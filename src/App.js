@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Keyboard from './components/Keyboard';
 import { equationList } from './constants/data';
+import { getExpvalue } from './utils/evaluate';
 
 const App = () => {
   const [boardData, setBoardData] = useState(null);
@@ -29,6 +30,7 @@ const App = () => {
   };
   useEffect(() => {
     setupgame();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleMessage = (message) => {
@@ -116,10 +118,17 @@ const App = () => {
   const handleKeyPress = (key) => {
     if (boardData.rowIndex > 5 || boardData.status === 'WIN') return;
     if (key === 'ENTER') {
-      if (charArray.length == col) {
+      if (charArray.length === col) {
         let word = charArray.join('').toLowerCase();
-        // todo
-
+        if (word.match(/=/g).length !== 1) {
+          handleMessage('Invalid Expression');
+          return;
+        }
+        const [exp, res] = word.split(/=/);
+        if (getExpvalue(exp) !== parseFloat(res, 10)) {
+          handleMessage('Invalid Expression');
+          return;
+        }
         enterBoardWord(word);
         setCharArray([]);
       } else {

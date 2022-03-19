@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import { keys } from '../constants/constants';
 import '../style/keyboard.css';
 
