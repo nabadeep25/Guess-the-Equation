@@ -1,0 +1,141 @@
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+.message {
+  position: absolute;
+  top: 30%;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  background: #787c7e;
+  font-size: 26px;
+  box-shadow: 0px, 5px, 5px, 0px dimgray;
+}
+
+.success {
+  color: #fff;
+  background: #38e569;
+}
+.info {
+  color: #fff;
+  background: #14d6ef;
+}
+.error {
+  color: #fff;
+  background: #f34e4e;
+}
+
+.title {
+  letter-spacing: 0.2rem;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(9, 9, 188);
+}
+
+.box-row {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.char {
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  font-weight: 700;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #d3d6da;
+}
+
+.reset-btn {
+  padding: 10px;
+  background-color: rgb(203, 203, 227);
+  margin-left: 20px;
+}
+
+.header {
+  padding: 20px;
+}
+.setting {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+  justify-content: center;
+}
+
+.correct {
+  background: #6aaa64;
+  color: #fff;
+}
+
+.present {
+  background: #c9b458;
+  color: #fff;
+}
+
+.absent {
+  background: #787c7e;
+  color: #fff;
+}
+.keyboard-container {
+  padding: 20px;
+}
+
+.select {
+  background-color: rgb(203, 203, 227);
+  display: flex;
+  border-radius: 5px;
+}
+.info-container {
+  max-width: 40%;
+  min-width: 20%;
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  justify-content: space-between;
+  border: solid grey 1px;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.52);
+  color: #fff;
+  text-align: center;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.col-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #d3d6da;
+}
