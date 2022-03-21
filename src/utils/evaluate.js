@@ -57,7 +57,6 @@ const infixToPostfix = (infixExp) => {
   infixExpression.unshift('(');
   const postfixExp = [];
   const operatorStack = [];
-  console.log(infixExpression);
 
   infixExpression.forEach((element) => {
     if (!Number.isNaN(parseFloat(element, 10))) {
@@ -88,7 +87,6 @@ const infixToPostfix = (infixExp) => {
     }
   });
 
-  console.log('Operator Stack', operatorStack, 'PostFix', postfixExp);
   return postfixExp;
 };
 const evaluatePostfix = (expression) => {
